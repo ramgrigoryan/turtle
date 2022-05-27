@@ -34,15 +34,30 @@ colour(r,g,b,a) 	   //ընտրել գույն() */
 // rotatedRadioActiveSign();
 
 //Task 28
-function rotatingSquare() {
-  width(5);
-  for (let squares = 0; squares < 8; squares++) {
-    squares % 2 === 1 ? colour(0, 0, 255, 1) : colour(255, 0, 0, 1);
+// function rotatingSquare() {
+//   width(10);
+//   for (let squares = 0; squares < 8; squares++) {
+//     squares % 2 === 1 ? colour(0, 0, 255, 1) : colour(255, 0, 0, 1);
+//     for (let i = 0; i < 4; i++) {
+//       forward(200);
+//       left(90);
+//     }
+//     left(45);
+//   }
+// }
+// rotatingSquare();
+
+//Task 29
+
+function rotatingColoredSquares(){
+  width(2)
+  for(let squares = 0;squares<24;squares++){
+    squares%3===2?colour(138,43,226,1):squares%3==1?colour(205,133,63,1):colour(100,149,237,1);
     for (let i = 0; i < 4; i++) {
-      forward(200);
-      left(90);
-    }
-    left(45);
+            forward(200);
+            left(90);
+          }
+          left(15);
   }
 }
-rotatingSquare();
+rotatingColoredSquares();
