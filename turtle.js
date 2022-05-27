@@ -11,7 +11,7 @@ angle(angle)	   //անկյուն
 width(width)       //մատիտի հաստությունը(հաստություն)
 colour(r,g,b,a) 	   //ընտրել գույն() */
 
-//Task 2
+//Task 26
 
 // function radioActiveSign() {
 //   for (let i = 1; i < 197; i++) {
@@ -21,3 +21,14 @@ colour(r,g,b,a) 	   //ընտրել գույն() */
 //   }
 // }
 // radioActiveSign();
+
+//Task 27
+function rotatedRadioActiveSign() {
+  for (let i = 1; i < 347; i++) {
+    i % 2 == 1 ? colour(255, 0, 0, 1) : colour(0, 0, 255, 1);
+    forward(i);
+    left(60);
+    i%3==1?right(3):left(0);
+  }
+}
+rotatedRadioActiveSign();
