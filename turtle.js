@@ -47,17 +47,29 @@ colour(r,g,b,a) 	   //ընտրել գույն() */
 // }
 // rotatingSquare();
 
-//Task 29
+//Task 29 +30
 
-function rotatingColoredSquares(){
-  width(2)
-  for(let squares = 0;squares<24;squares++){
+// function rotatingColoredSquares(){
+//   width(2)
+//   for(let squares = 0;squares<24;squares++){
+//     squares%3===2?colour(138,43,226,1):squares%3==1?colour(205,133,63,1):colour(100,149,237,1);
+//     for (let i = 0; i < 4; i++) {
+//             forward(200);
+//             left(90);
+//           }
+//           left(15);
+//   }
+// }
+// rotatingColoredSquares();
+function rotatingColoredNAngle(n){
+  width(5)
+  for(let squares = 0;squares<120;squares++){
     squares%3===2?colour(138,43,226,1):squares%3==1?colour(205,133,63,1):colour(100,149,237,1);
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
             forward(200);
-            left(90);
+            left(72);
           }
           left(15);
   }
 }
-rotatingColoredSquares();
+rotatingColoredNAngle();
