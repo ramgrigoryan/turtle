@@ -23,12 +23,26 @@ colour(r,g,b,a) 	   //ընտրել գույն() */
 // radioActiveSign();
 
 //Task 27
-function rotatedRadioActiveSign() {
-  for (let i = 1; i < 347; i++) {
-    i % 2 == 1 ? colour(255, 0, 0, 1) : colour(0, 0, 255, 1);
-    forward(i);
-    left(60);
-    i%3==1?right(3):left(0);
+// function rotatedRadioActiveSign() {
+//   for (let i = 1; i < 347; i++) {
+//     i % 2 == 1 ? colour(255, 0, 0, 1) : colour(0, 0, 255, 1);
+//     forward(i);
+//     left(60);
+//     i%3==1?right(3):left(0);
+//   }
+// }
+// rotatedRadioActiveSign();
+
+//Task 28
+function rotatingSquare() {
+  width(5);
+  for (let squares = 0; squares < 8; squares++) {
+    squares % 2 === 1 ? colour(0, 0, 255, 1) : colour(255, 0, 0, 1);
+    for (let i = 0; i < 4; i++) {
+      forward(200);
+      left(90);
+    }
+    left(45);
   }
 }
-rotatedRadioActiveSign();
+rotatingSquare();
