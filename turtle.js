@@ -1,25 +1,3 @@
-// function triangleLabyrinth() {
-//   let delta = 0;
-//   for (let j = 0; j < 150; j += 1) {
-//     right(3);
-//     for (let i = 0; i < 3; i++) {
-//       i == 1
-//         ? colour(152, 251, 152, 1)
-//         : i == 2
-//         ? colour(220, 20, 60, 1)
-//         : colour(186, 85, 211, 1);
-//       if ((i !==0)) {
-//         delta = +1;
-//       } else {
-//         delta = 0;
-//       }
-//       forward(100 + delta);
-//       left(120);
-//     }
-//   }
-// }
-// triangleLabyrinth();
-
 //Task 34
 
 // const randomNumber = (from, to) => (to - from) * Math.random();
@@ -43,64 +21,64 @@
 // }
 // drawSunlight();
 
-// goto(-300,0);
+// Task35
+
+// function drawGradientLine(getColor) {
+//   for (let i = 0; i < 20; i++) {
+//     colour(...getColor(i), 1);
+//     forward(10);
+//   }
+// }
+
+// function gradient(comp) {
+//   switch (comp) {
+//     case "r":
+//       drawGradientLine((i) => [i * 12, 0, 0]);
+//       break;
+//     case "g":
+//       drawGradientLine((i) => [0, i * 12, 0]);
+//       break;
+//     case "b":
+//       drawGradientLine((i) => [0, 0, i * 12]);
+//       break;
+//     default:
+//       drawGradientLine((i) => [i * 12, i * 12, i * 12]);
+//   }
+// }
+// goto(-300, 0);
 // gradient("r");
-// goto(-200,0);
+// goto(-200, 0);
 // gradient("g");
-// goto(-100,0);
+// goto(-100, 0);
 // gradient("b");
-// goto(0,0);
+// goto(0, 0);
 // gradient("z");
-// goto(100,0);
+// goto(100, 0);
 // gradient("k");
-// goto(200,0);
+// goto(200, 0);
 // gradient("m");
-// goto(300,0);
+// goto(300, 0);
 // gradient("n");
 
-// const color = (tone, colour) => {
-//   if(tone=="r"){
-
-//   }
-//     return colour(...tone);
-// };
-
-
-// Task35 
-
-function drawGradientLine(getColor) {
-  for (let i = 0; i < 20; i++) {
-    colour(...getColor(i), 1);
-    forward(10);
+//Task 32
+function triangleShuriken() {
+  let length = 50;
+  let delta = 5;
+  left(180);
+  for (let i = 0; i < 200; i++) {
+    i % 3 == 2
+      ? colour(60, 179, 113, 1)
+      : i % 3 == 1
+      ? colour(218, 112, 214, 1)
+      : colour(220, 20, 60, 1);
+    if (i % 2 == 0) {
+      left(1 + Math.PI / 360);
+      length += delta;
+      forward(length);
+    } else {
+      forward(length);
+    }
+    left(120);
   }
 }
-
-function gradient(comp) {
-  switch (comp) {
-    case "r":
-      drawGradientLine((i) => [i * 12, 0, 0]);
-      break;
-    case "g":
-      drawGradientLine((i) => [0, i * 12, 0]);
-      break;
-    case "b":
-      drawGradientLine((i) => [0, 0, i * 12]);
-      break;
-    default:
-      drawGradientLine((i) => [i * 12, i * 12, i * 12]);
-  }
-}
-goto(-300, 0);
-gradient("r");
-goto(-200, 0);
-gradient("g");
-goto(-100, 0);
-gradient("b");
-goto(0, 0);
-gradient("z");
-goto(100, 0);
-gradient("k");
-goto(200, 0);
-gradient("m");
-goto(300, 0);
-gradient("n");
+triangleShuriken();
